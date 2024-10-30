@@ -60,7 +60,7 @@ const Login = () => {
 
   return (
     <>
-      <SectionTitle title="Login" path="Home | Login" />
+      {/* <SectionTitle title="Login" path="" /> */}
       <div className="flex flex-col justify-center sm:py-12">
         <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
           <div className="bg-dark border border-gray-600 shadow w-full rounded-lg divide-y divide-gray-200">

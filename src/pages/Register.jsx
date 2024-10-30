@@ -83,7 +83,7 @@ const Register = () => {
   };
   return (
     <>
-      <SectionTitle title="Register" path="Home | Register" />
+      {/* <SectionTitle title="Register" path="Home | Register" /> */}
       <div className="flex flex-col justify-center sm:py-12">
         <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
           <div className="bg-dark border border-gray-600 shadow w-full rounded-lg divide-y divide-gray-200">
