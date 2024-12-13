@@ -25,7 +25,7 @@ const authSlice = createSlice({
       if(state.darkMode){
         document.querySelector('html').setAttribute('data-theme', "dark");
       }else{
-        document.querySelector('html').setAttribute('data-theme', "winter");
+        document.querySelector('html').setAttribute('data-theme', "light");
       }
     }
   },

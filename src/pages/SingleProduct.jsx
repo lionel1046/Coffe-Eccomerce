@@ -141,7 +141,7 @@ const SingleProduct = () => {
           <h2 className="text-5xl max-sm:text-3xl text-accent-content">
             {productData?.name}
           </h2>
-          <SingleProductRating rating={rating} productData={productData} />
+          {/* <SingleProductRating rating={rating} productData={productData} /> */}
           <p className="text-3xl text-error">
             IDR {productData?.price?.current?.value}
           </p>

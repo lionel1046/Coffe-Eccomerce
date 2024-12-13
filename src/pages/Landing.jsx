@@ -21,7 +21,6 @@ const Landing = () => {
     <main>
       {/* <Hero />
       <Stats /> */}
-
       <div className="selected-products">
         {/* <h2 className="text-6xl text-center my-12 max-md:text-4xl text-accent-content">
           Trending Products

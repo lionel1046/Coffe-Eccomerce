@@ -8,5 +8,8 @@ export default {
     themes: ["dark", "winter"],
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  daisyui: {
+    themes: ["dark", "light"],
+  },
 }
 

@@ -3,7 +3,7 @@
     {
       "id": 205082351,
       "name": "Kopi Sachet",
-      "description": "Demo description",
+      "description": "Kopi blend Arabica Robusta dalam 1 Sachet sekali seduh",
       "isInStock": true,
       "gender": "male",
       "category": "coffe",
@@ -45,7 +45,7 @@
           "reviewText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, vero distinctio maxime quidem aperiam ut expedita voluptate similique, officia, maiores a minus fugit explicabo dolor iure quisquam in voluptatibus ipsa facilis aliquid. Labore nulla quibusdam adipisci eligendi eum accusamus repellat!"
         }
       ],
-      "totalReviewCount": 30,
+      "totalReviewCount": 0,
       "productionDate": "2021-10-31T09:00:00.594Z",
       "price": {
         "current": {
@@ -66,7 +66,7 @@
     {
       "id": 205107270,
       "name": "Kopi 100mg",
-      "description": "Demo description",
+      "description": "Kopi blend Arabica Robusta",
       "isInStock": true,
       "gender": "female",
       "category": "coffe",
@@ -110,7 +110,7 @@
           "reviewText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, vero distinctio maxime quidem aperiam ut expedita voluptate similique, officia, maiores a minus fugit explicabo dolor iure quisquam in voluptatibus ipsa facilis aliquid. Labore nulla quibusdam adipisci eligendi eum accusamus repellat!"
         }
       ],
-      "totalReviewCount": 30,
+      "totalReviewCount": 0,
       "productionDate": "2022-10-31T09:00:00.594Z",
       "price": {
         "current": {
@@ -120,7 +120,7 @@
       },
       "brandName": "Kopi Bubuk",
       "productCode": 132236489,
-      "imageUrl": "/100mg.jpg",
+      "imageUrl": "/kemasan100mg.jpg",
       "additionalImageUrls": [
         "images.asos-media.com/products/walk-london-sean-tassel-loafers-in-brown-milled-leather/205107270-1-brown",
         "images.asos-media.com/products/walk-london-sean-tassel-loafers-in-brown-milled-leather/205107270-2",
@@ -131,7 +131,7 @@
     {
       "id": 204349751,
       "name": "Kopi 250mg",
-      "description": "Demo description",
+      "description": "Kopi blend Arabica Robusta",
       "isInStock": true,
       "gender": "male",
       "category": "coffe",
@@ -175,7 +175,7 @@
           "reviewText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, vero distinctio maxime quidem aperiam ut expedita voluptate similique, officia, maiores a minus fugit explicabo dolor iure quisquam in voluptatibus ipsa facilis aliquid. Labore nulla quibusdam adipisci eligendi eum accusamus repellat!"
         }
       ],
-      "totalReviewCount": 30,
+      "totalReviewCount": 0,
       "productionDate": "2010-10-31T09:00:00.594Z",
       "price": {
         "current": {
@@ -185,7 +185,7 @@
       },
       "brandName": "Kopi Bubuk",
       "productCode": 126663939,
-      "imageUrl": "/100mg.jpg",
+      "imageUrl": "/kemasan250mg.jpg",
       "additionalImageUrls": [
         "images.asos-media.com/products/reebok-bb-4000-ii-sneakers-in-white-with-blue-detail/204349751-1-white",
         "images.asos-media.com/products/reebok-bb-4000-ii-sneakers-in-white-with-blue-detail/204349751-2",
@@ -197,7 +197,7 @@
     {
       "id": 204525730,
       "name": "Kopi 500mg",
-      "description": "Demo description",
+      "description": "Kopi blend Arabica Robusta",
       "isInStock": true,
       "gender": "male",
       "category": "coffe",
@@ -240,7 +240,7 @@
           "reviewText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, vero distinctio maxime quidem aperiam ut expedita voluptate similique, officia, maiores a minus fugit explicabo dolor iure quisquam in voluptatibus ipsa facilis aliquid. Labore nulla quibusdam adipisci eligendi eum accusamus repellat!"
         }
       ],
-      "totalReviewCount": 210,
+      "totalReviewCount": 0,
       "productionDate": "2019-10-31T09:00:00.594Z",
       "price": {
         "current": {
@@ -250,7 +250,7 @@
       },
       "brandName": "Kopi Bubuk",
       "productCode": 127493550,
-      "imageUrl": "/100mg.jpg",
+      "imageUrl": "/kopibubuk.jpg",
       "additionalImageUrls": [
         "images.asos-media.com/products/nike-air-force-1-07-lv8-remix-sneakers-in-gray/204525730-1-grey",
         "images.asos-media.com/products/nike-air-force-1-07-lv8-remix-sneakers-in-gray/204525730-2",
@@ -261,7 +261,7 @@
     {
       "id": 204913684,
       "name": "Kopi 1Kg",
-      "description": "Demo description",
+      "description": "Kopi blend Arabica Robusta",
       "isInStock": false,
       "gender": "male",
       "category": "coffe",
@@ -304,7 +304,7 @@
           "reviewText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, vero distinctio maxime quidem aperiam ut expedita voluptate similique, officia, maiores a minus fugit explicabo dolor iure quisquam in voluptatibus ipsa facilis aliquid. Labore nulla quibusdam adipisci eligendi eum accusamus repellat!"
         }
       ],
-      "totalReviewCount": 40,
+      "totalReviewCount": 0,
       "productionDate": "2019-10-31T09:00:00.594Z",
       "price": {
         "current": {
@@ -314,7 +314,7 @@
       },
       "brandName": "Kopi Bubuk",
       "productCode": 130949144,
-      "imageUrl": "/100mg.jpg",
+      "imageUrl": "/kopibubuk.jpg",
       "additionalImageUrls": [
         "images.asos-media.com/products/jack-jones-faux-suede-slippers-in-tan/204913684-1-almond",
         "images.asos-media.com/products/jack-jones-faux-suede-slippers-in-tan/204913684-2",
@@ -322,6 +322,398 @@
         "images.asos-media.com/products/jack-jones-faux-suede-slippers-in-tan/204913684-4"
       ]
     }
-    
+  ],
+  "user": [
+    {
+      "id": "KccekO4m2DB0N-AZdDWCQ",
+      "name": "fahrol",
+      "lastname": "wan",
+      "email": "okokokok@gmail.com",
+      "phone": "0987654321",
+      "adress": "indo",
+      "password": "0987654321",
+      "userWishlist": []
+    },
+    {
+      "id": "oHhOciFxuGgGxNTe1BYdI",
+      "name": "irwan",
+      "lastname": "alfi",
+      "email": "irwalfnsyh1046@gmail.com",
+      "phone": "0987654321",
+      "adress": "okok",
+      "password": "okokok",
+      "userWishlist": []
+    },
+    {
+      "id": "UpuGxS_0d2LjiSnwUDMWl",
+      "name": "Irwan",
+      "lastname": "ALfi",
+      "email": "irwan@gmail.com",
+      "phone": "0987654321",
+      "adress": "aceh",
+      "password": "1234567890",
+      "userWishlist": []
+    }
+  ],
+  "orders": [
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 1500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 1500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 15000,
+      "cartItems": [
+        {
+          "id": 205107270,
+          "title": "Kopi 100mg",
+          "image": "/kemasan100mg.jpg",
+          "rating": 5,
+          "price": 15000,
+          "brandName": "Kopi Bubuk",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 3
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 1500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 4
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 1500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 5
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 1500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 6
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 1500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 7
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 1500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 8
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 16500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        },
+        {
+          "id": 205107270,
+          "title": "Kopi 100mg",
+          "image": "/Kopi.jpg",
+          "rating": 5,
+          "price": 15000,
+          "brandName": "Kopi Bubuk",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 9
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 96500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        },
+        {
+          "id": 205107270,
+          "title": "Kopi 100mg",
+          "image": "/Kopi.jpg",
+          "rating": 5,
+          "price": 15000,
+          "brandName": "Kopi Bubuk",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        },
+        {
+          "id": 204913684,
+          "title": "Kopi 1Kg",
+          "image": "/Kopi.jpg",
+          "rating": 5,
+          "price": 80000,
+          "brandName": "Kopi Bubuk",
+          "amount": 1,
+          "selectedSize": 38,
+          "isInWishList": false
+        }
+      ],
+      "id": 10
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 15000,
+      "cartItems": [
+        {
+          "id": 205107270,
+          "title": "Kopi 100mg",
+          "image": "/Kopi.jpg",
+          "rating": 5,
+          "price": 15000,
+          "brandName": "Kopi Bubuk",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 11
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 1500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 12
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 1500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 13
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 1500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 14
+    },
+    {
+      "userId": "KccekO4m2DB0N-AZdDWCQ",
+      "orderStatus": "in progress",
+      "subtotal": 46500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        },
+        {
+          "id": 205107270,
+          "title": "Kopi 100mg",
+          "image": "/Kopi.jpg",
+          "rating": 5,
+          "price": 15000,
+          "brandName": "Kopi Bubuk",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        },
+        {
+          "id": 204349751,
+          "title": "Kopi 250mg",
+          "image": "/Kopi.jpg",
+          "rating": 4,
+          "price": 30000,
+          "brandName": "Kopi Bubuk",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 15
+    },
+    {
+      "userId": "UpuGxS_0d2LjiSnwUDMWl",
+      "orderStatus": "in progress",
+      "subtotal": 1500,
+      "cartItems": [
+        {
+          "id": 205082351,
+          "title": "Kopi Sachet",
+          "image": "/Sachet Kopi.jpg",
+          "rating": 5,
+          "price": 1500,
+          "brandName": "Kopi Sachet",
+          "amount": 1,
+          "selectedSize": 37,
+          "isInWishList": false
+        }
+      ],
+      "id": 16
+    }
   ]
 }
