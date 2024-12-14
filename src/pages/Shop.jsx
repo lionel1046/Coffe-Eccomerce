@@ -53,7 +53,7 @@ export const shopLoader = async ({ request }) => {
 
   try {
     const response = await axios(
-      `http://localhost:8080/products${parameter}`
+      `https://json-server-production-d0c3.up.railway.app/products${parameter}`
 
     );
     let data = response.data;

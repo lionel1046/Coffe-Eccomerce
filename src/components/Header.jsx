@@ -30,7 +30,7 @@ const Header = () => {
   const fetchWishlist = async () => {
     if(loginState){
       try {
-        const getResponse = await axios.get(`http://localhost:8080/user/${localStorage.getItem("id")}`);
+        const getResponse = await axios.get(`https://json-server-production-d0c3.up.railway.app/user/${localStorage.getItem("id")}`);
         const userObj = getResponse.data;
   
         store.dispatch(updateWishlist({userObj}));

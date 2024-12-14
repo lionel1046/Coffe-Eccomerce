@@ -25,7 +25,7 @@ import { store } from "../store";
 export const singleProductLoader = async ({ params }) => {
   const { id } = params;
 
-  const response = await axios(`http://localhost:8080/products/${id}`);
+  const response = await axios(`https://json-server-production-d0c3.up.railway.app/products/${id}`);
 
   return { productData: response.data };
 };
@@ -48,6 +48,8 @@ const SingleProduct = () => {
 
   const { productData } = useLoaderData();
 
+  console.log(productData)
+
   const product = {
     id: productData?.id + size,
     title: productData?.name,
@@ -69,7 +71,7 @@ const SingleProduct = () => {
   const addToWishlistHandler = async (product) => {
     try {
       const getResponse = await axios.get(
-        `http://localhost:8080/user/${localStorage.getItem("id")}`
+        `https://json-server-production-d0c3.up.railway.app/user/${localStorage.getItem("id")}`
       );
       const userObj = getResponse.data;
 
@@ -79,7 +81,7 @@ const SingleProduct = () => {
       userObj.userWishlist.push(product);
 
       const postResponse = await axios.put(
-        `http://localhost:8080/user/${localStorage.getItem("id")}`,
+        `https://json-server-production-d0c3.up.railway.app/user/${localStorage.getItem("id")}`,
         userObj
       );
 
@@ -93,7 +95,7 @@ const SingleProduct = () => {
 
   const removeFromWishlistHandler = async (product) => {
     const getResponse = await axios.get(
-      `http://localhost:8080/user/${localStorage.getItem("id")}`
+      `https://json-server-production-d0c3.up.railway.app/user/${localStorage.getItem("id")}`
     );
     const userObj = getResponse.data;
 
@@ -106,7 +108,7 @@ const SingleProduct = () => {
     userObj.userWishlist = newWishlist;
 
     const postResponse = await axios.put(
-      `http://localhost:8080/user/${localStorage.getItem("id")}`,
+      `https://json-server-production-d0c3.up.railway.app/user/${localStorage.getItem("id")}`,
       userObj
     );
 
