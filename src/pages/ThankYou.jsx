@@ -16,12 +16,15 @@ const ThankYou = () => {
 
   const saveToOrderHistory = async () => {
     try {
-      const response = await axios.post("https://json-server-production-d0c3.up.railway.app/orders", {
-        userId: localStorage.getItem("id"),
-        orderStatus: "in progress",
-        subtotal: total,
-        cartItems: cartItems,
-      });
+      const response = await axios.post(
+        "https://json-server-production-d0c3.up.railway.app/orders",
+        {
+          userId: localStorage.getItem("id"),
+          orderStatus: "in progress",
+          subtotal: total,
+          cartItems: cartItems,
+        }
+      );
     } catch (err) {
       toast.error(err.response);
     }
@@ -41,7 +44,6 @@ const ThankYou = () => {
     }
   }, []);
 
-
   return (
     <>
       {/* <SectionTitle title="Thank You" path="Home | Cart | Thank you" /> */}
@@ -56,14 +58,17 @@ const ThankYou = () => {
         <h3 className="text-2xl mt-5 max-sm:text-xl">
           Silahkan klik "LANJUTKAN PEMBAYARAN" untuk menyelesaikan pemesanan:
         </h3>
-        <a href="https://wa.me/6285277953466/?text=Assalamu'alaikum%20admin,%20saya%20ingin%20melakukan%20pembayaran" className='btn w-1/4 bg-blue-600 hover:bg-blue-500 text-white btn-block mt-8'>Lanjutkan pembayaran</a>
+        <a
+          href="https://wa.me/6285277953466/?text=Assalamu'alaikum%20admin,%20saya%20ingin%20melakukan%20pembayaran"
+          className="btn w-1/4 bg-blue-600 hover:bg-blue-500 text-white btn-block mt-8"
+        >
+          Lanjutkan pembayaran
+        </a>
 
         <h4 className="text-xl mt-5 max-sm:text-lg">
           Terima kasih telah memilih kami sebagai teman kopi Anda!
         </h4>
-        <h4 className="text-xl max-sm:text-lg">
-          UD Maktuwo
-        </h4>
+        <h4 className="text-xl max-sm:text-lg">UD Maktuwo</h4>
       </div>
     </>
   );

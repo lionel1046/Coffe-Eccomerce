@@ -25,7 +25,9 @@ import { store } from "../store";
 export const singleProductLoader = async ({ params }) => {
   const { id } = params;
 
-  const response = await axios(`https://json-server-production-d0c3.up.railway.app/products/${id}`);
+  const response = await axios(
+    `https://json-server-production-d0c3.up.railway.app/products/${id}`
+  );
 
   return { productData: response.data };
 };
@@ -48,8 +50,6 @@ const SingleProduct = () => {
 
   const { productData } = useLoaderData();
 
-  console.log(productData)
-
   const product = {
     id: productData?.id + size,
     title: productData?.name,
@@ -71,21 +71,19 @@ const SingleProduct = () => {
   const addToWishlistHandler = async (product) => {
     try {
       const getResponse = await axios.get(
-        `https://json-server-production-d0c3.up.railway.app/user/${localStorage.getItem("id")}`
+        `http://localhost:8080/user/${localStorage.getItem("id")}`
       );
       const userObj = getResponse.data;
 
-      
       userObj.userWishlist = userObj.userWishlist || [];
 
       userObj.userWishlist.push(product);
 
       const postResponse = await axios.put(
-        `https://json-server-production-d0c3.up.railway.app/user/${localStorage.getItem("id")}`,
+        `http://localhost:8080/user/${localStorage.getItem("id")}`,
         userObj
       );
 
-      
       store.dispatch(updateWishlist({ userObj }));
       toast.success("Product added to the wishlist!");
     } catch (error) {
@@ -95,7 +93,7 @@ const SingleProduct = () => {
 
   const removeFromWishlistHandler = async (product) => {
     const getResponse = await axios.get(
-      `https://json-server-production-d0c3.up.railway.app/user/${localStorage.getItem("id")}`
+      `http://localhost:8080/user/${localStorage.getItem("id")}`
     );
     const userObj = getResponse.data;
 
@@ -108,14 +106,17 @@ const SingleProduct = () => {
     userObj.userWishlist = newWishlist;
 
     const postResponse = await axios.put(
-      `https://json-server-production-d0c3.up.railway.app/user/${localStorage.getItem("id")}`,
+      `http://localhost:8080/user/${localStorage.getItem("id")}`,
       userObj
     );
 
-    
     store.dispatch(removeFromWishlist({ userObj }));
     toast.success("Product removed from the wishlist!");
   };
+
+  if (!productData) {
+    return <div>Produk tidak ditemukan.</div>;
+  }
 
   return (
     <>
