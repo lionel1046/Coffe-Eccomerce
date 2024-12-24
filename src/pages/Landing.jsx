@@ -110,9 +110,7 @@ const Landing = () => {
           <div className="xl:flex px-20 space-y-5 xl:space-x-10">
             <div className="xl:w-1/3 bg-[#AF8F6F] text-white text-center p-6 rounded-sm">
               <div className="w-full flex justify-center mb-6">
-                <h1 className="bg-white text-4xl font-bold rounded-full w-20 h-20  p-4 text-stone-500 text-center">
-                  1
-                </h1>
+                
               </div>
 
               <h4 className="text-xl font-bold mb-3">ARABICA</h4>
@@ -124,9 +122,7 @@ const Landing = () => {
             </div>
             <div className="xl:w-1/3 bg-[#74512D] text-white text-center p-6 rounded-sm xl:translate-y-20">
               <div className="w-full flex justify-center mb-6">
-                <h1 className="bg-white text-4xl font-bold rounded-full w-20 h-20  p-4 text-stone-600 text-center">
-                  2
-                </h1>
+                
               </div>
               <h4 className="text-xl font-bold mb-3">ROBUSTA</h4>
               <p>
@@ -136,9 +132,6 @@ const Landing = () => {
             </div>
             <div className="xl:w-1/3 bg-[#543310] text-white text-center p-6 rounded-sm xl:translate-y-40">
               <div className="w-full flex justify-center mb-6">
-                <h1 className="bg-white text-4xl font-bold rounded-full w-20 h-20  p-4 text-stone-700 text-center">
-                  3
-                </h1>
               </div>
               <h4 className="text-xl font-bold mb-3">BLENDING</h4>
               <p>
