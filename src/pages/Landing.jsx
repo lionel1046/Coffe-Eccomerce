@@ -23,7 +23,7 @@ const Landing = () => {
   return (
     <main>
       <div>
-        <div className="xl:flex xl:items-center px-10 py-20 xl:px-20">
+        <div className="xl:flex xl:items-center px-10 py-32 xl:px-20">
           <div>
             <h1 className="text-3xl xl:text-6xl font-bold mb-4 xl:mb-8 uppercase text-center xl:text-left">
               Jaga mimpimu tetap<br></br>terjaga dengan secangkir<br></br>kopi
