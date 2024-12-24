@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 const Footer = () => {
   const loginState = useSelector((state) => state.auth.isLoggedIn);
   return (
-    <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded mt-10 max-md:px-0">
+    <footer className="footer footer-center p-10 bg-white text-black rounded max-md:px-0">
       {/* <nav className="grid grid-flow-col max-sm:grid-flow-row gap-4">
         <Link to="/" className="link link-hover text-2xl max-md:text-xl text-accent-content" onClick={() => window.scrollTo(0, 0)}>
           Home
@@ -51,8 +51,8 @@ const Footer = () => {
         </div>
       </nav> */}
       <aside>
-        <p className="text-2xl max-sm:text-sm text-accent-content">
-          Copyright © 2024 - All right reserved by UD MakTuwo
+        <p className="text-lg max-sm:text-sm text-black">
+          Copyright © 2024 - All right reserved by UD MAKTUWO
         </p>
       </aside>
     </footer>

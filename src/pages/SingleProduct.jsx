@@ -146,18 +146,18 @@ const SingleProduct = () => {
           </h2>
           {/* <SingleProductRating rating={rating} productData={productData} /> */}
           <p className="text-3xl text-error">
-            IDR {productData?.price?.current?.value}
+            IDR {productData?.price?.current?.value.toLocaleString()}
           </p>
           <div className="text-xl max-sm:text-lg text-accent-content">
             {parse(productData?.description)}
           </div>
-          {/* <div className="text-2xl">
+          <div className="text-2xl">
             <SelectSize
               sizeList={productData?.availableSizes}
               size={size}
               setSize={setSize}
             />
-          </div> */}
+          </div>
           <div>
             <label htmlFor="Quantity" className="sr-only">
               {" "}

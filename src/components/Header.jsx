@@ -80,8 +80,8 @@ const Header = () => {
             className="btn btn-ghost normal-case text-2xl font-black text-accent-content"
           >
             {/* <AiFillShopping /> */}
-            <img className="w-10" src="/logoo.png" alt="" />
-            Kopi UD MakTuwo
+            {/* <img className="w-10" src="/logoo.png" alt="" /> */}
+            UD MAKTUWO
           </Link>
         </div>
         <div className="flex-none">
@@ -144,13 +144,13 @@ const Header = () => {
                 <span className="font-bold text-lg text-accent-content">
                   {amount} Items
                 </span>
-                <span className="text-info text-accent-content">
+                <span className="text-accent-content">
                   Subtotal: IDR {total}
                 </span>
                 <div className="card-actions">
                   <Link
                     to="/cart"
-                    className="btn bg-blue-600 btn-block text-white hover:bg-blue-500 text-base-content"
+                    className="btn bg-orange-500 btn-block text-white hover:bg-orange-600 "
                   >
                     View cart
                   </Link>
@@ -193,13 +193,13 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="navbar-bottom-menu border-y border-gray-800">
+      <div className="navbar-bottom-menu bg-[#6C4E31]">
         <div className="drawer">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
             {/* Page content here */}
-            <label htmlFor="my-drawer" className="btn drawer-button">
-              <HiMiniBars3BottomLeft className="text-4xl" />
+            <label htmlFor="my-drawer" className="ml-4 btn drawer-button">
+              <HiMiniBars3BottomLeft className="text-2xl" />
             </label>
           </div>
           <div className="drawer-side z-10">
@@ -209,25 +209,26 @@ const Header = () => {
               className="drawer-overlay"
             ></label>
 
-            <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content mt-4">
-              <label htmlFor="my-drawer" className="btn drawer-button">
-                <FaWindowClose className="text-3xl ml-auto" />
+            <ul className="menu p-4 w-60 min-h-full bg-[#6C4E31] text-base-content">
+              <label htmlFor="my-drawer" className=" drawer-button">
+                <FaWindowClose className="text-white text-3xl ml-auto" />
               </label>
               {/* Sidebar content here */}
-              <li className="text-xl">
-                <NavLink className="text-accent-content" to="/">
-                  Home
-                </NavLink>
-              </li>
               {/* <li className="text-xl">
                 <NavLink className="text-accent-content" to="/shop">
                   Shop
                 </NavLink>
               </li> */}
-              <li className="text-xl">
-                <NavLink className="text-accent-content" to="/about-us">
-                  About us
-                </NavLink>
+              <li className="text-xl text-white mt-5">
+                <a href="/" className="flex justify-center">
+                  Home
+                </a>
+                <a href="#produk" className="flex justify-center">
+                  Produk
+                </a>
+                <a href="#about" className="flex justify-center">
+                  About
+                </a>
               </li>
               {/* <li className="text-xl">
                 <NavLink className="text-accent-content" to="/contact">
@@ -236,15 +237,13 @@ const Header = () => {
               </li> */}
               {!isLoggedIn && (
                 <>
-                  <li className="text-xl">
-                    <NavLink className="text-accent-content" to="/login">
+                  <li className="text-xl text-white">
+                    <a href="/login" className="flex justify-center">
                       Login
-                    </NavLink>
-                  </li>
-                  <li className="text-xl">
-                    <NavLink className="text-accent-content" to="/register">
+                    </a>
+                    <a href="/register" className="flex justify-center">
                       Register
-                    </NavLink>
+                    </a>
                   </li>
                 </>
               )}
@@ -252,29 +251,37 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="container text-2xl navlinks-container">
-          <NavLink className="text-accent-content" to="/">
-            Home
-          </NavLink>
-          {/* <NavLink className="text-accent-content" to="/shop">
+        <div className="container  navlinks-container">
+          <div className="w-full flex justify-between text-lg">
+            <div className="space-x-10">
+              <NavLink className="text-white" to="/">
+                Home
+              </NavLink>
+              {/* <NavLink className="text-accent-content" to="/shop">
             Shop
           </NavLink> */}
-          <NavLink className="text-accent-content" to="/about-us">
-            About us
-          </NavLink>
+              <a href="#produk" className="text-white">
+                Produk
+              </a>
+              <a href="#about" className="text-white">
+                About
+              </a>
+            </div>
+            {!isLoggedIn && (
+              <div className="space-x-10">
+                <NavLink className="text-white" to="/login">
+                  Login
+                </NavLink>
+                <NavLink className="text-white" to="/register">
+                  Register
+                </NavLink>
+              </div>
+            )}
+          </div>
+
           {/* <NavLink className="text-accent-content" to="/contact">
             Contact
           </NavLink> */}
-          {!isLoggedIn && (
-            <>
-              <NavLink className="text-accent-content" to="/login">
-                Login
-              </NavLink>
-              <NavLink className="text-accent-content" to="/register">
-                Register
-              </NavLink>
-            </>
-          )}
         </div>
       </div>
     </>

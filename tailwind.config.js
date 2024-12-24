@@ -8,10 +8,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    themes: ["dark", "winter"],
+    themes: ["coffee", "winter"],
   },
   plugins: [typography, daisyui],
   daisyui: {
-    themes: ["dark", "light"],
+    themes: ["coffee", "light"],
   },
 };
