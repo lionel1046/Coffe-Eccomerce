@@ -151,13 +151,14 @@ const SingleProduct = () => {
           <div className="text-xl max-sm:text-lg text-accent-content">
             {parse(productData?.description)}
           </div>
-          <div className="text-2xl">
+          {productData?.name === "Kopi Bubuk" && <div className="text-2xl">
             <SelectSize
               sizeList={productData?.availableSizes}
               size={size}
               setSize={setSize}
             />
-          </div>
+          </div>}
+          
           <div>
             <label htmlFor="Quantity" className="sr-only">
               {" "}
