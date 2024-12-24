@@ -220,13 +220,13 @@ const Header = () => {
                 </NavLink>
               </li> */}
               <li className="text-xl text-white mt-5">
-                <a href="/" className="flex justify-center">
+                <a href="/">
                   Home
                 </a>
-                <a href="#produk" className="flex justify-center">
+                <a href="#produk" >
                   Produk
                 </a>
-                <a href="#about" className="flex justify-center">
+                <a href="#about">
                   About
                 </a>
               </li>

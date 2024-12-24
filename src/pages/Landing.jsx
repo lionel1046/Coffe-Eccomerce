@@ -47,7 +47,7 @@ const Landing = () => {
 
         <div
           id="produk"
-          className="w-full h-screen pt-16 xl:pt-20 bg-[url('/bgkopi.jpg')] bg-no-repeat bg-cover px-10"
+          className="w-full h-full xl:h-screen pt-16 xl:pt-20 bg-[url('/bgkopi.jpg')] bg-no-repeat bg-cover px-10"
         >
           <h1 className="text-2xl xl:text-4xl font-bold text-center mb-6">
             PRODUK KAMI
@@ -101,7 +101,7 @@ const Landing = () => {
         </div>
         <div
           id="bubuk-kopi"
-          className="h-full xl:h-screen w-full pt-10 xl:pt-20"
+          className="h-full xl:h-screen w-full py-10 xl:py-20"
         >
           <h3 className="text-2xl xl:text-4xl text-center font-bold mb-20">
             PERBEDAAN
@@ -155,7 +155,7 @@ const Landing = () => {
           <img
             src="/coffeecup.png"
             alt="Kopi"
-            className="w-80 translate-x-10 xl:w-1/2 xl:translate-x-0"
+            className="w-80 xl:w-1/2"
           />
           <div className="">
             <h1 className="text-2xl xl:text-4xl font-bold text-center mb-10">
