@@ -63,9 +63,9 @@ const Landing = () => {
                 alt="Kopi Sachet"
                 className="w-full h-40 xl:w-80 xl:h-80 object-cover"
               />
-              <div className="flex justify-between">
+              <div className="flex justify-center">
                 <h2 className="text-black font-medium mb-6">KOPI SACHET</h2>
-                <h2 className="text-gray-500 font-medium mb-6">Rp 1.500</h2>
+                
               </div>
               <button
                 onClick={() => {
@@ -83,9 +83,9 @@ const Landing = () => {
                 alt="Kopi Sachet"
                 className="w-full h-40 xl:w-80 xl:h-80 object-cover"
               />
-              <div className="flex justify-between">
+              <div className="flex justify-center">
                 <h2 className="text-black font-medium mb-6">KOPI BUBUK</h2>
-                <h2 className="text-gray-500 font-medium mb-6">Rp 15.000</h2>
+                
               </div>
               <button
                 onClick={() => {
