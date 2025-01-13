@@ -5,6 +5,8 @@ import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import axios from "axios";
 import ModalKopi from "../components/ModalKopi";
 
+// hgygh
+
 export const landingLoader = async () => {
   const response = await axios(
     `https://json-server-production-d0c3.up.railway.app/products?_page=1&_limit=8`
