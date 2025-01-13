@@ -250,15 +250,17 @@ const Header = () => {
               </li> */}
                 {!isLoggedIn && (
                   <>
-                    <li className="text-xl text-white">
-                      <a href="/login" className="flex justify-center">
-                        Login
-                      </a>
-                      <a href="/register" className="flex justify-center">
-                        Register
-                      </a>
-                    </li>
-                  </>
+                  <li className="text-xl">
+                    <NavLink className="text-accent-content" to="/login">
+                      Login
+                    </NavLink>
+                  </li>
+                  <li className="text-xl">
+                    <NavLink className="text-accent-content" to="/register">
+                      Register
+                    </NavLink>
+                  </li>
+                </>
                 )}
               </ul>
             </div>
