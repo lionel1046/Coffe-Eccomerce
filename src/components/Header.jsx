@@ -251,12 +251,12 @@ const Header = () => {
                 {!isLoggedIn && (
                   <>
                   <li className="text-xl">
-                    <NavLink className="text-accent-content" to="/login">
+                    <NavLink className="text-accent-content flex justify-center" to="/login">
                       Login
                     </NavLink>
                   </li>
                   <li className="text-xl">
-                    <NavLink className="text-accent-content" to="/register">
+                    <NavLink className="text-accent-content flex justify-center" to="/register">
                       Register
                     </NavLink>
                   </li>
