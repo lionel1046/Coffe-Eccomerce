@@ -13,12 +13,13 @@ import {
   Profile,
   Search,
   ThankYou,
-  OrderHistory
+  OrderHistory,
 } from "./pages";
 import { landingLoader } from "./pages/Landing";
 import { singleProductLoader } from "./pages/SingleProduct";
 import { shopLoader } from "./pages/Shop";
 import { ToastContainer } from "react-toastify";
+import Dashboard from "./pages/dashboard";
 
 const router = createBrowserRouter([
   {
@@ -33,8 +34,7 @@ const router = createBrowserRouter([
       {
         path: "shop",
         element: <Shop />,
-        loader: shopLoader
-
+        loader: shopLoader,
       },
       {
         path: "shop/product/:id",
@@ -70,21 +70,25 @@ const router = createBrowserRouter([
         element: <Wishlist />,
       },
       {
+        path: "admin-dashboard",
+        element: <Dashboard />,
+      },
+      {
         path: "user-profile",
         element: <Profile />,
       },
       {
-        path:"search",
-        element: <Search />
+        path: "search",
+        element: <Search />,
       },
       {
-        path:"thank-you",
-        element: <ThankYou />
+        path: "thank-you",
+        element: <ThankYou />,
       },
       {
-        path:"order-history",
-        element: <OrderHistory />
-      }
+        path: "order-history",
+        element: <OrderHistory />,
+      },
     ],
   },
 ]);

@@ -16,12 +16,15 @@ const ThankYou = () => {
 
   const saveToOrderHistory = async () => {
     try {
-      const response = await axios.post("http://localhost:8080/orders", {
-        userId: localStorage.getItem("id"),
-        orderStatus: "in progress",
-        subtotal: total,
-        cartItems: cartItems,
-      });
+      const response = await axios.post(
+        "https://json-server-production-d0c3.up.railway.app/orders",
+        {
+          userId: localStorage.getItem("id"),
+          orderStatus: "in progress",
+          subtotal: total,
+          cartItems: cartItems,
+        }
+      );
     } catch (err) {
       toast.error(err.response);
     }
@@ -41,40 +44,31 @@ const ThankYou = () => {
     }
   }, []);
 
-
   return (
     <>
-      <SectionTitle title="Thank You" path="Home | Cart | Thank you" />
+      {/* <SectionTitle title="Thank You" path="Home | Cart | Thank you" /> */}
       <div className="thankyou-content text-center text-accent-content px-10 max-w-7xl mx-auto">
         <h2 className="text-6xl max-sm:text-4xl">
-          Thank you for your purchase!
+          Terima Kasih telah berbelanja di UD Maktuwo!
         </h2>
 
         <h3 className="text-2xl mt-10 max-sm:text-xl">
-          We hope you love your new clothes and shoes! We appreciate your
-          business and look forward to seeing you again soon.
+          Kami harap anda menyukai kopi dari UD Maktuwo
         </h3>
         <h3 className="text-2xl mt-5 max-sm:text-xl">
-          Here are some things you can do next:
+          Silahkan klik "LANJUTKAN PEMBAYARAN" untuk menyelesaikan pemesanan:
         </h3>
-        <ul className="text-xl mt-5 text-blue-500 max-sm:text-lg">
-          <li className="hover:text-blue-600 cursor-pointer">
-            <Link to="/order-history">&rarr; See order history &larr;</Link>
-          </li>
-          <li className="hover:text-blue-600 cursor-pointer">
-            <Link to="/">&rarr; Browse more product and buy more &larr;</Link>
-          </li>
-          <li className="hover:text-blue-600 cursor-pointer">
-            &rarr; Follow us on social media &larr;
-          </li>
-        </ul>
+        <a
+          href="https://wa.me/6285277953466/?text=Assalamu'alaikum%20admin,%20saya%20ingin%20melakukan%20pembayaran"
+          className="btn w-1/4 bg-blue-600 hover:bg-blue-500 text-white btn-block mt-8"
+        >
+          Lanjutkan pembayaran
+        </a>
 
         <h4 className="text-xl mt-5 max-sm:text-lg">
-          Thank you again for your purchase!
+          Terima kasih telah memilih kami sebagai teman kopi Anda!
         </h4>
-        <h4 className="text-xl max-sm:text-lg">
-          Sincerely, The Kuzma Clothing & Shoes team
-        </h4>
+        <h4 className="text-xl max-sm:text-lg">UD Maktuwo</h4>
       </div>
     </>
   );

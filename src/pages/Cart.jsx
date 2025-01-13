@@ -1,46 +1,50 @@
-import React from 'react'
-import { CartItemsList, CartTotals, SectionTitle } from '../components'
-import { Link, useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { toast } from 'react-toastify';
+import React from "react";
+import { CartItemsList, CartTotals, SectionTitle } from "../components";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 const Cart = () => {
-  
   const navigate = useNavigate();
   const loginState = useSelector((state) => state.auth.isLoggedIn);
   const { cartItems } = useSelector((state) => state.cart);
 
   const isCartEmpty = () => {
-    if(cartItems.length === 0){
+    if (cartItems.length === 0) {
       toast.error("Your cart is empty");
-    }else{
+    } else {
       navigate("/thank-you");
     }
-  }
+  };
 
   return (
     <>
-    <SectionTitle title="Cart"  />
-    <div className='mt-8 grid gap-8 lg:grid-cols-12 max-w-7xl mx-auto px-10'>
-        <div className='lg:col-span-8'>
+      <SectionTitle title="Cart" />
+      <div className="mt-8 grid gap-8 lg:grid-cols-12 max-w-7xl mx-auto px-10">
+        <div className="lg:col-span-8">
           <CartItemsList />
         </div>
-        <div className='lg:col-span-4 lg:pl-4'>
+        <div className="lg:col-span-4 lg:pl-4">
           <CartTotals />
           {loginState ? (
-            <a href="https://wa.me/6285277953466/?text=Halo%20,%20saya%20ingin%20melakukan%20pembayaran" className='btn bg-blue-600 hover:bg-blue-500 text-white btn-block mt-8'>order now</a>
-            // <button onClick={isCartEmpty} className='btn bg-blue-600 hover:bg-blue-500 text-white btn-block mt-8'>
-            //   order now
-            // </button>
+            <button
+              onClick={isCartEmpty}
+              className="btn bg-orange-500 hover:bg-orange-600 text-white btn-block mt-8"
+            >
+              order now
+            </button>
           ) : (
-            <Link to='/login' className='btn bg-blue-600 hover:bg-blue-500 btn-block text-white mt-8'>
+            <Link
+              to="/login"
+              className="btn bg-orange-500 hover:bg-orange-600 btn-block text-white mt-8"
+            >
               please login
             </Link>
           )}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

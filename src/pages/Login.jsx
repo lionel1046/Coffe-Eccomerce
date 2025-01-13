@@ -36,7 +36,7 @@ const Login = () => {
   const proceedLogin = (e) => {
     e.preventDefault();
     if (isValidate()) {
-      fetch("http://localhost:8080/user")
+      fetch("https://json-server-production-d0c3.up.railway.app/user")
         .then((res) => res.json())
         .then((res) => {
           let data = res;
@@ -61,11 +61,12 @@ const Login = () => {
   return (
     <>
       {/* <SectionTitle title="Login" path="" /> */}
-      <div className="flex flex-col justify-center sm:py-12">
+      <div className="h-screen flex flex-col justify-center sm:py-12 bg-[#6C4E31]">
         <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
-          <div className="bg-dark border border-gray-600 shadow w-full rounded-lg divide-y divide-gray-200">
-            <form className="px-5 py-7" onSubmit={proceedLogin}>
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
+          <div className="bg-white shadow-lg w-full rounded-lg py-10">
+            <h3 className="text-3xl font-bold text-center text-black">LOGIN</h3>
+            <form className="px-5 py-10" onSubmit={proceedLogin}>
+              <label className="font-semibold text-sm pb-1 block text-black">
                 E-mail
               </label>
               <input
@@ -73,9 +74,9 @@ const Login = () => {
                 required={true}
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
-                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+                className="border rounded-lg px-3 py-3 mt-1 mb-5 text-sm w-full bg-white"
               />
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
+              <label className="font-semibold text-sm pb-1 block text-black">
                 Password
               </label>
               <input
@@ -83,11 +84,11 @@ const Login = () => {
                 required={true}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+                className="border rounded-lg px-3 py-3 mt-1 mb-5 text-sm w-full bg-white"
               />
               <button
                 type="submit"
-                className="transition duration-200 bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
+                className="transition duration-200 bg-orange-500 hover:bg-orange-600 focus:bg-orange-700 focus:shadow-sm focus:ring-4 focus:ring-orange-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
               >
                 <span className="inline-block mr-2">Login</span>
                 <svg
@@ -106,15 +107,16 @@ const Login = () => {
                 </svg>
               </button>
             </form>
-          </div>
-          <div className="py-5 text-center">
-            <Link
-              to="/register"
-              className="btn btn-neutral text-white"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              Don't have an account? Please register.
-            </Link>
+            <div className="flex space-x-2 justify-center">
+              <p>Don't have an account?</p>
+              <Link
+                to="/register"
+                className="text-orange-500"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Register.
+              </Link>
+            </div>
           </div>
         </div>
       </div>

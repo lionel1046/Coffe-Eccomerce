@@ -6,12 +6,11 @@ import { toast } from "react-toastify";
 
 const Register = () => {
   const [name, setName] = useState("");
-  const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phone, setPhone] = useState("");
-  const [adress, setAdress] = useState("");
+  const [address, setAddress] = useState("");
 
   const navigate = useNavigate();
 
@@ -22,7 +21,7 @@ const Register = () => {
     if (name.length === 0) {
       isProceed = false;
       errorMessage = "Please enter the value in username field";
-    } else if (lastname.length === 0) {
+    } else if (name.length === 0) {
       isProceed = false;
       errorMessage = "Please enter the value in lastname field";
     } else if (email.length === 0) {
@@ -31,7 +30,7 @@ const Register = () => {
     } else if (phone.length < 4) {
       isProceed = false;
       errorMessage = "Phone must be longer than 3 characters";
-    } else if (adress.length < 4) {
+    } else if (address.length < 4) {
       isProceed = false;
       errorMessage = "Adress must be longer than 3 characters";
     } else if (password.length < 6) {
@@ -58,16 +57,16 @@ const Register = () => {
     let regObj = {
       id: nanoid(),
       name,
-      lastname,
       email,
       phone,
-      adress,
+      address,
       password,
+      role: "Member",
       userWishlist: [],
     };
 
     if (isValidate()) {
-      fetch("http://localhost:8080/user", {
+      fetch("https://json-server-production-d0c3.up.railway.app/user", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regObj),
@@ -83,84 +82,75 @@ const Register = () => {
   };
   return (
     <>
-      {/* <SectionTitle title="Register" path="Home | Register" /> */}
-      <div className="flex flex-col justify-center sm:py-12">
+      {/* <SectionTitle title="Register" path="" /> */}
+      <div className="flex flex-col justify-center sm:py-12 bg-[#6C4E31]">
         <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
-          <div className="bg-dark border border-gray-600 shadow w-full rounded-lg divide-y divide-gray-200">
+          <div className="bg-white shadow-lg w-full rounded-lg py-10">
+            <h3 className="text-3xl font-bold text-center">Create Account</h3>
             <form className="px-5 py-7" onSubmit={handleSubmit}>
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
+              <label className="font-semibold text-sm pb-1 block text-black">
                 Name
               </label>
               <input
                 type="text"
-                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-white"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required={true}
               />
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
-                Lastname
-              </label>
-              <input
-                type="text"
-                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
-                value={lastname}
-                onChange={(e) => setLastname(e.target.value)}
-                required={true}
-              />
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
+              <label className="font-semibold text-sm pb-1 block text-black">
                 E-mail
               </label>
               <input
                 type="email"
-                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-white"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required={true}
               />
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
+              <label className="font-semibold text-sm pb-1 block text-black">
                 Phone
               </label>
               <input
                 type="tel"
-                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-white"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required={true}
               />
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
-                Adress
+              <label className="font-semibold text-sm pb-1 block text-black">
+                Address
               </label>
               <input
                 type="text"
-                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
-                value={adress}
-                onChange={(e) => setAdress(e.target.value)}
+                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-white"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
                 required={true}
               />
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
+              <label className="font-semibold text-sm pb-1 block text-black">
                 Password
               </label>
               <input
                 type="password"
-                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-white"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required={true}
               />
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
-                Repeat Password
+              <label className="font-semibold text-sm pb-1 block text-black">
+                Confirm Password
               </label>
               <input
                 type="password"
-                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+                className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-white"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required={true}
               />
               <button
                 type="submit"
-                className="transition duration-200 bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
+                className="transition duration-200 bg-orange-500 hover:bg-orange-600 focus:bg-orange-700 focus:shadow-sm focus:ring-4 focus:ring-orange-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
               >
                 <span className="inline-block mr-2">Register</span>
                 <svg
@@ -179,15 +169,16 @@ const Register = () => {
                 </svg>
               </button>
             </form>
-          </div>
-          <div className="py-5 text-center">
-            <Link
-              to="/login"
-              className="btn btn-neutral text-white"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              Already have an account? Please login.
-            </Link>
+            <div className="flex space-x-2 justify-center  text-center">
+              <p>Already have an account?</p>
+              <Link
+                to="/login"
+                className="text-orange-500"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Login
+              </Link>
+            </div>
           </div>
         </div>
       </div>
