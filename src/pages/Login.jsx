@@ -9,6 +9,7 @@ import { loginUser, logoutUser } from "../features/auth/authSlice";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const loginState = useSelector((state) => state.auth.isLoggedIn);
@@ -25,10 +26,10 @@ const Login = () => {
 
     if (email.length === 0) {
       isProceed = false;
-      toast.warn("Please enter a email");
+      setError("Please enter a email");
     } else if (password.length < 6) {
       isProceed = false;
-      toast.warn("Password must be minimum 6 characters");
+      setError("Password must be minimum 6 characters");
     }
     return isProceed;
   };
@@ -44,16 +45,15 @@ const Login = () => {
             (item) => item.email === email && item.password === password
           );
           if (foundUser[0]) {
-            toast.success("Login successful");
             localStorage.setItem("id", foundUser[0].id);
             store.dispatch(loginUser());
             navigate("/");
           } else {
-            toast.warn("Email or password is incorrect");
+            setError("Email or password is incorrect");
           }
         })
         .catch((err) => {
-          toast.error("Login failed due to: " + err.message);
+          setError("Login failed due to: " + err.message);
         });
     }
   };
@@ -86,6 +86,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 className="border rounded-lg px-3 py-3 mt-1 mb-5 text-sm w-full bg-white"
               />
+              {error && <p className="text-sm text-red-600">{error}</p>}
               <button
                 type="submit"
                 className="transition duration-200 bg-orange-500 hover:bg-orange-600 focus:bg-orange-700 focus:shadow-sm focus:ring-4 focus:ring-orange-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"

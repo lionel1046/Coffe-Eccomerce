@@ -11,6 +11,7 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
@@ -21,10 +22,7 @@ const Register = () => {
     if (name.length === 0) {
       isProceed = false;
       errorMessage = "Please enter the value in username field";
-    } else if (name.length === 0) {
-      isProceed = false;
-      errorMessage = "Please enter the value in lastname field";
-    } else if (email.length === 0) {
+    }  else if (email.length === 0) {
       isProceed = false;
       errorMessage = "Please enter the value in email field";
     } else if (phone.length < 4) {
@@ -45,7 +43,7 @@ const Register = () => {
     }
 
     if (!isProceed) {
-      toast.warn(errorMessage);
+      setError(errorMessage);
     }
 
     return isProceed;
@@ -72,11 +70,10 @@ const Register = () => {
         body: JSON.stringify(regObj),
       })
         .then((res) => {
-          toast.success("Registration Successful");
           navigate("/login");
         })
         .catch((err) => {
-          toast.error("Failed: " + err.message);
+          setError("Failed: " + err.message);
         });
     }
   };
@@ -148,6 +145,7 @@ const Register = () => {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required={true}
               />
+              {error && <p className="text-sm text-red-600">{error}</p>}
               <button
                 type="submit"
                 className="transition duration-200 bg-orange-500 hover:bg-orange-600 focus:bg-orange-700 focus:shadow-sm focus:ring-4 focus:ring-orange-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"

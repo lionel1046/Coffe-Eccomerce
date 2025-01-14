@@ -69,7 +69,7 @@ export default function ModalAddProduct({ setProducts, setModalAddProduct }) {
                 Description
               </label>
               <input
-                type="tel"
+                type="text"
                 className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-white"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
@@ -79,7 +79,7 @@ export default function ModalAddProduct({ setProducts, setModalAddProduct }) {
                 Ready Stock
               </label>
               <input
-                type="text"
+                type="number"
                 className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-white"
                 value={readyStock}
                 onChange={(e) => setReadyStock(e.target.value)}

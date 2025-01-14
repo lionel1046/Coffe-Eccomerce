@@ -35,6 +35,7 @@ export const singleProductLoader = async ({ params }) => {
 const SingleProduct = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const [error, setError] = useState("");
   const [size, setSize] = useState(0);
   const { wishItems } = useSelector((state) => state.wishlist);
   const { userId } = useSelector((state) => state.auth);
@@ -171,12 +172,18 @@ const SingleProduct = () => {
               <QuantityInput quantity={quantity} setQuantity={setQuantity} />
             </div>
           </div>
+          {error && <p className="text-sm text-red-600">{error}</p>}
           <div className="flex flex-row gap-x-2 max-sm:flex-col max-sm:gap-x">
             <button
+            disabled={productData?.isInStock <= 0 }
               className="btn bg-blue-600 hover:bg-blue-500 text-white"
               onClick={() => {
                 if (loginState) {
-                  dispatch(addToCart(product));
+                  if(quantity <= productData?.isInStock) {
+                    dispatch(addToCart(product));
+                  } else {
+                    setError("Jumlah stock tidak tercukupi")
+                  }
                 } else {
                   toast.error(
                     "You must be logged in to add products to the cart"

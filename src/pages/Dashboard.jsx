@@ -318,7 +318,7 @@ export default function Dashboard() {
                   <td>Image</td>
                   <td>Name</td>
                   <td>Price</td>
-                  <td>Ready Stock</td>
+                  <td>Jumlah Stock</td>
                   <td>Action</td>
                 </tr>
               </thead>
@@ -337,18 +337,9 @@ export default function Dashboard() {
                       <td>{product.name}</td>
                       <td>Rp {product.price.current.value.toLocaleString()}</td>
                       <td>
-                        <select
-                          name={product.name}
-                          id={product.name}
-                          value={product.isInStock}
-                          onChange={(e) => {
+                        <input className="border rounded-lg px-3 py-3 mt-1 mb-5 text-sm w-fit bg-white" type="number" value={product.isInStock} onChange={(e) => {
                             changeProductStock(product.id, e);
-                          }}
-                          className="border py-1 px-6 rounded-sm"
-                        >
-                          <option value="Ya">Ya</option>
-                          <option value="Tidak">Tidak</option>
-                        </select>
+                          }} />
                       </td>
                       <td>
                         <button
