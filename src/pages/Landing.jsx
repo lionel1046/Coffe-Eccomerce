@@ -5,11 +5,9 @@ import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import axios from "axios";
 import ModalKopi from "../components/ModalKopi";
 
-// hgygh
-
 export const landingLoader = async () => {
   const response = await axios(
-    `https://json-server-production-d0c3.up.railway.app/products?_page=1&_limit=8`
+    `https://json-server-production-d0c3.up.railway.app/products/`
   );
   const data = response.data;
 
@@ -59,45 +57,34 @@ const Landing = () => {
             robusta, selalu ada secangkir kopi baru yang layak dicoba
           </p>
           <div className="xl:flex w-full p-8 space-y-5 xl:space-x-10 xl:space-y-0 justify-center">
-            <div className="h-fit px-4 pt-4 pb-6 bg-white shadow-md rounded-sm">
-              <img
-                src="/KopiSachet.jpg"
-                alt="Kopi Sachet"
-                className="w-full h-40 xl:w-80 xl:h-80 object-cover"
-              />
-              <div className="flex justify-between">
-                <h2 className="text-black font-medium mb-6">KOPI SACHET</h2>
-                <h2 className="text-gray-500 font-medium mb-6">Rp 1.500</h2>
-              </div>
-              <button
-                onClick={() => {
-                  navigate("/shop/product/205082351");
-                }}
-                className="bg-orange-500  text-white font-semibold w-full py-2 rounded-sm hover:bg-orange-700"
+            {products.map((product) => (
+              <div
+                key={product.id}
+                className="h-fit px-4 pt-4 pb-6 bg-white shadow-md rounded-sm"
               >
-                Detail
-              </button>
-            </div>
-            <div className="h-fit px-4 pt-4 pb-6 bg-white shadow-md rounded-sm">
-              <img
-                src="/kopibubuk.jpg"
-                alt="Kopi Sachet"
-                className="w-full h-40 xl:w-80 xl:h-80 object-cover"
-              />
-              <div className="flex justify-between">
-                <h2 className="text-black font-medium mb-6">KOPI BUBUK</h2>
-                <h2 className="text-gray-500 font-medium mb-6">Rp 15.000</h2>
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className="w-full h-40 xl:w-80 xl:h-80 object-cover"
+                />
+                <div className="flex justify-between">
+                  <h2 className="text-black font-medium mb-6 uppercase">
+                    {product.name}
+                  </h2>
+                  <h2 className="text-gray-500 font-medium mb-6">
+                    {product.price.current.text}
+                  </h2>
+                </div>
+                <button
+                  onClick={() => {
+                    navigate(`/shop/product/${product.id}`);
+                  }}
+                  className="bg-orange-500  text-white font-semibold w-full py-2 rounded-sm hover:bg-orange-700"
+                >
+                  Detail
+                </button>
               </div>
-              <button
-                onClick={() => {
-                  setOpenModal(true);
-                  setIdModal("205107270");
-                }}
-                className="bg-orange-500  text-white font-semibold w-full py-2 rounded-sm hover:bg-orange-700"
-              >
-                Detail
-              </button>
-            </div>
+            ))}
           </div>
         </div>
         <div
