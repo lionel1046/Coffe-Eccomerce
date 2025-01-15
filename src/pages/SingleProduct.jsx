@@ -59,7 +59,7 @@ const SingleProduct = () => {
     price: productData?.price?.current?.value,
     brandName: productData?.brandName,
     amount: quantity,
-    selectedSize: size || productData?.availableSizes[0],
+    selectedSize: size || productData?.availableSizes && productData?.availableSizes[0],
     isInWishList:
       wishItems.find((item) => item.id === productData?.id + size) !==
       undefined,
