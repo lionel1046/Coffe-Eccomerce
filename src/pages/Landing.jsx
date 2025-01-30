@@ -44,49 +44,6 @@ const Landing = () => {
 
           <img src="/bgkopi.png" alt="Kopi" className="mt-20 xl:w-1/2" />
         </div>
-
-        <div
-          id="produk"
-          className="w-full h-screen pt-16 xl:pt-20 bg-[url('/bgkopi.jpg')] bg-no-repeat bg-cover px-10"
-        >
-          <h1 className="text-2xl xl:text-4xl font-bold text-center mb-6">
-            PRODUK KAMI
-          </h1>
-          <p className="capitalize text-center xl:mb-12">
-            kopi yang paling disukai pelanggan kami. Dari arabika hingga
-            robusta, selalu ada secangkir kopi baru yang layak dicoba
-          </p>
-          <div className="xl:flex w-full p-8 space-y-5 xl:space-x-10 xl:space-y-0 justify-center">
-            {products.map((product) => (
-              <div
-                key={product.id}
-                className="h-fit px-4 pt-4 pb-6 bg-white shadow-md rounded-sm"
-              >
-                <img
-                  src={product.imageUrl}
-                  alt={product.name}
-                  className="w-full h-40 xl:w-80 xl:h-80 object-cover"
-                />
-                <div className="flex justify-between">
-                  <h2 className="text-black font-medium mb-6 uppercase">
-                    {product.name}
-                  </h2>
-                  <h2 className="text-gray-500 font-medium mb-6">
-                    {product.price.current.text}
-                  </h2>
-                </div>
-                <button
-                  onClick={() => {
-                    navigate(`/shop/product/${product.id}`);
-                  }}
-                  className="bg-orange-500  text-white font-semibold w-full py-2 rounded-sm hover:bg-orange-700"
-                >
-                  Detail
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
         <div
           id="bubuk-kopi"
           className="h-full xl:h-screen w-full pt-10 xl:pt-20"
@@ -136,6 +93,50 @@ const Landing = () => {
             </div>
           </div>
         </div>
+
+        <div
+          id="produk"
+          className="w-full h-screen pt-16 xl:pt-20 bg-[url('/bgkopi.jpg')] bg-no-repeat bg-cover px-10"
+        >
+          <h1 className="text-2xl xl:text-4xl font-bold text-center mb-6">
+            PRODUK KAMI
+          </h1>
+          <p className="capitalize text-center xl:mb-12">
+            kopi yang paling disukai pelanggan kami. Dari arabika hingga
+            robusta, selalu ada secangkir kopi baru yang layak dicoba
+          </p>
+          <div className="xl:flex w-full p-8 space-y-5 xl:space-x-10 xl:space-y-0 justify-center">
+            {products.map((product) => (
+              <div
+                key={product.id}
+                className="h-fit px-4 pt-4 pb-6 bg-white shadow-md rounded-sm"
+              >
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className="w-full h-40 xl:w-80 xl:h-80 object-cover"
+                />
+                <div className="flex justify-between">
+                  <h2 className="text-black font-medium mb-6 uppercase">
+                    {product.name}
+                  </h2>
+                  <h2 className="text-gray-500 font-medium mb-6">
+                    {product.price.current.text}
+                  </h2>
+                </div>
+                <button
+                  onClick={() => {
+                    navigate(`/shop/product/${product.id}`);
+                  }}
+                  className="bg-orange-500  text-white font-semibold w-full py-2 rounded-sm hover:bg-orange-700"
+                >
+                  Detail
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+        
         <div
           id="about"
           className="h-screen pt-10 xl:pr-32 xl:pl-12 bg-[#74512D] text-white xl:flex items-center justify-center overflow-hidden"
