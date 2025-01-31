@@ -16,7 +16,7 @@ export default function ModalAddProduct({ setProducts, setModalAddProduct }) {
     e.preventDefault();
 
     let regObj = {
-      id: nanoid(),
+      id: Math.floor(100000000 + Math.random() * 900000000),
       imageUrl: `/${image}`,
       name,
       description,

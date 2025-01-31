@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { SectionTitle } from "../components";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,10 +13,59 @@ const ThankYou = () => {
   const { total } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [products, setProducts] = useState([]);
+
+  const changeProductStock = async (id, amount) => {
+    try {
+      const productToUpdate = products.find((product) => product.id === id);
+
+      if (!productToUpdate) {
+        console.log("Product not found");
+        return;
+      }
+
+      const updatedProduct = { ...productToUpdate, isInStock: Number(productToUpdate.isInStock) - amount };
+
+      setProducts((prevProducts) =>
+        prevProducts.map((product) =>
+          product.id === id
+            ? { ...product, isInStock: Number(productToUpdate.isInStock) - amount }
+            : product
+        )
+      );
+
+      const response = await fetch(
+        `https://json-server-production-d0c3.up.railway.app/products/${id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedProduct),
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const fetchDataProduct = async () => {
+    try {
+      const getResponse = await axios.get(
+        "https://json-server-production-d0c3.up.railway.app/products"
+      );
+      const productObj = getResponse.data;
+      console.log(productObj);
+      setProducts(productObj);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const saveToOrderHistory = async () => {
     try {
-      const response = await axios.post(
+      
+      const addOrders = await axios.post(
         "https://json-server-production-d0c3.up.railway.app/orders",
         {
           userId: localStorage.getItem("id"),
@@ -25,23 +74,39 @@ const ThankYou = () => {
           cartItems: cartItems,
         }
       );
+      console.log(products);
+      cartItems.forEach(item => {
+        console.log(item.id);
+        changeProductStock(item.id, item.amount);
+      });
     } catch (err) {
       toast.error(err.response);
     }
   };
 
-  if (cartItems.length > 0) {
-    saveToOrderHistory();
-    store.dispatch(clearCart());
-    store.dispatch(calculateTotals());
-    toast.success("Order completed");
-  }
+  // if (cartItems.length > 0) {
+  //   saveToOrderHistory();
+  //   store.dispatch(clearCart());
+  //   store.dispatch(calculateTotals());
+  //   toast.success("Order completed");
+  // }
+
+  useEffect(() => {
+    if (cartItems.length > 0 && products.length > 0) {
+      saveToOrderHistory();
+      dispatch(clearCart());
+      dispatch(calculateTotals());
+      toast.success("Order completed");
+    }
+  }, [cartItems, products, dispatch]); // Pastikan menunggu `products` terisi
+  
 
   useEffect(() => {
     if (!loginState) {
       toast.error("You must be logged in to access this page");
       navigate("/");
     }
+    fetchDataProduct();
   }, []);
 
   return (

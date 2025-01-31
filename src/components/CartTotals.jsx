@@ -15,10 +15,6 @@ const CartTotals = () => {
           <span className="font-medium">IDR {Math.round(total)}</span>
         </p>
         {/* SHIPPING */}
-        <p className="flex justify-between text-xs border-b border-base-300 pb-2 text-accent-content">
-          <span>Shipping</span>
-          <span className="font-medium">IDR {shipping}</span>
-        </p>
         {/* Tax */}
         {/* <p className='flex justify-between text-xs border-b border-base-300 pb-2 text-accent-content'>
           <span>Tax 10%</span>
@@ -28,7 +24,7 @@ const CartTotals = () => {
         <p className="flex justify-between text-sm mt-4 pb-2 text-accent-content">
           <span>Order Total</span>
           <span className="font-medium">
-            IDR {Math.round(total + shipping + tax)}
+            IDR {Math.round(total)}
           </span>
         </p>
       </div>
